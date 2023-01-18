@@ -48,9 +48,6 @@ li > a {
   justify-content: space-between;
 }
 
-#hero {
-}
-
 .main {
   width: 70%;
 }
@@ -104,6 +101,42 @@ li > a {
 }
 
 .sidebar {
-  background: gray;
-  width: 26%;
+  background: black;
+  width: 23%;
+  padding: 30px 25px;
+}
+
+.news__stories {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-content: space-around;
+}
+
+.story {
+  border-bottom: 1px solid hsl(236, 13%, 42%);
+  margin-bottom: 14px;
+}
+
+.story:last-child {
+  border-bottom: none;
+}
+
+.sidebar h1 {
+  color: hsl(35, 77%, 62%);
+  font-size: xx-large;
+  margin-bottom: 0.8rem;
+}
+
+.story > h4 {
+  color: hsl(36, 100%, 99%);
+  font-size: 18px;
+  margin: 16px 0;
+}
+
+.story p {
+  color: hsl(236, 13%, 42%);
+  font-size: 15px;
+  line-height: 1.2rem;
+  margin-bottom: 24px;
 }
