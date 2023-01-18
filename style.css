@@ -1,7 +1,19 @@
 body {
   font-family: "Inter", serif;
-  margin: 0;
+  margin: auto;
   background-color: hsl(36, 100%, 99%);
+  width: 100vw;
+  font-weight: 400;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.app {
+  max-width: 80%;
+  margin: auto;
 }
 
 header {
@@ -9,7 +21,6 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 80%;
   height: 140px;
   margin: auto;
 }
@@ -31,5 +42,68 @@ li > a {
   text-decoration: none;
 }
 
-@media screen {
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#hero {
+}
+
+.main {
+  width: 70%;
+}
+
+.main__content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main__title {
+  font-size: 2.8em;
+  font-weight: 800;
+  width: 80%;
+  line-height: 1em;
+}
+
+.main__img {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.main__textcontent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 83%;
+  line-height: 25px;
+  padding: 0 8px;
+}
+
+.main__textcontent__parag {
+  font-size: 15px;
+  color: hsl(236, 13%, 42%);
+}
+
+.action__btn {
+  background-color: hsl(5, 85%, 63%);
+  padding: 18px 30px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  border: none;
+  cursor: pointer;
+  transition: 0.15s;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.action__btn:hover {
+  background-color: hsl(35, 77%, 62%);
+}
+
+.sidebar {
+  background: gray;
+  width: 26%;
 }
