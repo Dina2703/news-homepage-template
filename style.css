@@ -4,6 +4,7 @@ body {
   background-color: hsl(36, 100%, 99%);
   width: 100vw;
   font-weight: 400;
+  overflow-x: hidden;
 }
 
 * {
@@ -12,9 +13,9 @@ body {
 }
 
 .app {
-  max-width: 80%;
+  max-width: 1440px;
   margin: auto;
-  padding: 20px 0;
+  padding: 20px;
 }
 
 nav {
@@ -64,8 +65,9 @@ li > a:hover {
 .main__title {
   font-size: 2.8em;
   font-weight: 800;
-  width: 80%;
+  width: 50%;
   line-height: 1em;
+  padding-right: 20px;
 }
 
 .main__img {
@@ -77,7 +79,7 @@ li > a:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 83%;
+  width: 50%;
   line-height: 25px;
   padding: 0 8px;
 }
@@ -113,13 +115,11 @@ li > a:hover {
 .news__stories {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  align-content: space-around;
+  align-content: space-between;
 }
 
 .story {
   border-bottom: 1px solid hsl(236, 13%, 42%);
-  margin-bottom: 14px;
 }
 
 .story:last-child {
@@ -129,7 +129,6 @@ li > a:hover {
 .sidebar h1 {
   color: hsl(35, 77%, 62%);
   font-size: xx-large;
-  margin-bottom: 0.8rem;
 }
 
 .story > h4 {
@@ -142,5 +141,108 @@ li > a:hover {
   color: hsl(236, 13%, 42%);
   font-size: 15px;
   line-height: 1.2rem;
-  margin-bottom: 24px;
+  padding-bottom: 24px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .nav__items {
+    display: none;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+  }
+
+  .main {
+    width: 100%;
+  }
+
+  .main__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main__title {
+    display: inline-block;
+    font-size: 2.8em;
+    font-weight: 800;
+    width: inherit;
+    line-height: 1em;
+  }
+
+  .main__img {
+    width: 100%;
+    margin-bottom: 30px;
+    height: 400px;
+  }
+
+  .main__textcontent {
+    width: 95%;
+    padding-left: 0;
+    line-height: 25px;
+  }
+
+  .main__textcontent__parag {
+    font-size: 15px;
+    color: hsl(236, 13%, 42%);
+    margin: 20px 0;
+  }
+
+  .action__btn {
+    background-color: hsl(5, 85%, 63%);
+    padding: 18px 30px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    border: none;
+    cursor: pointer;
+    transition: 0.15s;
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  .action__btn:hover {
+    background-color: hsl(35, 77%, 62%);
+  }
+
+  .sidebar {
+    background: black;
+    width: 100%;
+    padding: 30px 25px;
+    margin-top: 3rem;
+  }
+
+  .news__stories {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+  }
+
+  .story {
+    border-bottom: 1px solid hsl(236, 13%, 42%);
+  }
+
+  .story:last-child {
+    border-bottom: none;
+  }
+
+  .sidebar h1 {
+    color: hsl(35, 77%, 62%);
+    font-size: xx-large;
+  }
+
+  .story > h4 {
+    color: hsl(36, 100%, 99%);
+    font-size: 18px;
+    margin: 16px 0;
+  }
+
+  .story p {
+    color: hsl(236, 13%, 42%);
+    font-size: 15px;
+    line-height: 1.2rem;
+    padding-bottom: 24px;
+  }
 }
