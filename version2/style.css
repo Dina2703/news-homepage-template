@@ -32,6 +32,7 @@ a {
 }
 img {
   width: 100%;
+  height: 100%;
 }
 
 /* Utilities || custom  reuseable classes */
@@ -55,6 +56,10 @@ img {
   justify-content: center;
   align-items: center;
   height: 100%;
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
 }
 
 /* navbar styling */
@@ -83,7 +88,7 @@ nav a:hover {
 /* Hero section styling */
 
 .hero {
-  height: 400px;
+  height: 500px;
 }
 
 .hero .grid {
@@ -96,7 +101,8 @@ nav a:hover {
 
 .main .grid {
   align-items: flex-start;
-  grid-template-columns: 45% 55%;
+  grid-template-columns: 45% 50%;
+  justify-content: start;
 }
 
 .main h1 {
@@ -129,6 +135,8 @@ nav a:hover {
   background: var(--title);
   color: var(--bg-white);
   height: 100%;
+  max-height: 450px;
+  overflow: hidden;
   padding: 20px;
 }
 
@@ -148,4 +156,39 @@ nav a:hover {
 .new h5 {
   font-size: 15px;
   margin: 15px 0;
+}
+
+/* Briefs news */
+.briefs {
+  padding: 10px 0;
+  margin: 1.5rem 0;
+}
+
+.briefs .flex {
+  gap: 30px;
+}
+
+.brief-news {
+  height: 140px;
+  width: 33%;
+}
+
+.brief-news .flex {
+  flex-direction: column;
+  height: 100%;
+  gap: 0;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.briefs-text {
+  padding: 5px 0;
+}
+
+.briefs-text h3 {
+  color: var(--grayish-blue);
+}
+
+.briefs-text p {
+  font-size: 14px;
 }
