@@ -22,6 +22,13 @@
             <li><a href="#">Trending</a></li>
             <li><a href="#">Categories</a></li>
           </ul>
+          <div class="menu-icon">
+            <img
+              src="../assets/images/icon-menu.svg"
+              alt=""
+              aria-hidden="true"
+            />
+          </div>
         </nav>
       </div>
     </div>
@@ -30,7 +37,21 @@
     <section class="hero">
       <div class="container grid">
         <div class="main flex">
-          <img src="../assets/images/image-web-3-desktop.jpg" alt="" />
+          <picture>
+            <source
+              media="(min-width: 660px)"
+              srcset="../assets/images/image-web-3-desktop.jpg"
+            />
+            <source
+              media="(max-width: 600px)"
+              srcset="../assets/images/image-web-3-mobile.jpg"
+            />
+            <img
+              src="../assets//images//image-web-3-mobile.jpg"
+              alt="a cute kitten"
+              class="main__img"
+            />
+          </picture>
           <div class="main-context grid">
             <h1>The Bright Future Of Web 3.0?</h1>
             <div class="main-text flex">

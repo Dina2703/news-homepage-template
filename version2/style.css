@@ -64,8 +64,12 @@ img {
 
 /* navbar styling */
 
+.navbar nav .menu-icon {
+  display: none;
+}
+
 .navbar {
-  height: 100px;
+  min-height: 100px;
 }
 
 .navbar > .flex {
@@ -88,7 +92,7 @@ nav a:hover {
 /* Hero section styling */
 
 .hero {
-  height: 430px;
+  min-height: 430px;
 }
 
 .hero .grid {
@@ -115,7 +119,7 @@ nav a:hover {
   flex-direction: column;
 }
 
-.hero .flex img {
+.hero .flex .main__img {
   flex-grow: 1;
 }
 
@@ -216,5 +220,56 @@ nav a:hover {
   .brief-news .flex {
     align-items: flex-start;
     gap: 4px;
+  }
+}
+
+/* Mobile*/
+/* everything is under 500 px will apply th styling below */
+
+@media (max-width: 350px) {
+  /* navbar */
+  .navbar {
+    height: 70px;
+  }
+  .navbar nav ul {
+    display: none;
+  }
+  .navbar nav .menu-icon {
+    display: inline-block;
+  }
+
+  .navbar .container > div {
+    height: 30px;
+  }
+
+  /* hero */
+  .hero .grid {
+    grid-template-columns: 1fr;
+    height: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .main button {
+    margin-top: 20px;
+  }
+
+  /* briefs */
+  .briefs .flex {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .briefs .container .flex {
+    flex-direction: row;
+  }
+
+  .briefs .brief-news .flex {
+    flex-direction: column;
+  }
+
+  .brief-news > img {
+    padding-right: 10px;
+    flex-basis: 35%;
   }
 }
