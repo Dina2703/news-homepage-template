@@ -44,7 +44,7 @@ img {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1024px;
   margin: 0 auto;
   padding: 0 30px;
 }
@@ -88,7 +88,7 @@ nav a:hover {
 /* Hero section styling */
 
 .hero {
-  height: 500px;
+  height: 430px;
 }
 
 .hero .grid {
@@ -100,15 +100,23 @@ nav a:hover {
 }
 
 .main .grid {
-  align-items: flex-start;
+  align-items: center;
   grid-template-columns: 45% 50%;
-  justify-content: start;
+  justify-content: center;
 }
 
 .main h1 {
   font-weight: 800;
   font-size: xx-large;
   line-height: 2.2rem;
+}
+
+.hero .flex {
+  flex-direction: column;
+}
+
+.hero .flex img {
+  flex-grow: 1;
 }
 
 .main .flex {
@@ -135,7 +143,6 @@ nav a:hover {
   background: var(--title);
   color: var(--bg-white);
   height: 100%;
-  max-height: 450px;
   overflow: hidden;
   padding: 20px;
 }
@@ -169,8 +176,11 @@ nav a:hover {
 }
 
 .brief-news {
+  width: 30%;
+}
+
+.brief-news img {
   height: 140px;
-  width: 33%;
 }
 
 .brief-news .flex {
@@ -191,4 +201,20 @@ nav a:hover {
 
 .briefs-text p {
   font-size: 14px;
+}
+
+/* TABLETS and UNDER*/
+/* everything is under 768px will apply th styling below */
+@media (max-width: 768px) {
+  .briefs .container > .flex {
+    flex-direction: column;
+  }
+
+  .briefs .container > .brief-news {
+    gap: 4px;
+  }
+  .brief-news .flex {
+    align-items: flex-start;
+    gap: 4px;
+  }
 }
